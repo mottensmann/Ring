@@ -1,0 +1,31 @@
+Package: Ring
+Title: Export Ringing Data As Databse compatible To 'Ring 2.0'
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Meinolf",
+           family = "Ottensmann",
+           role = c("aut", "cre"),
+           email = "meinolf.ottensmann@web.de",
+           comment = c(ORCID = "0000-0003-3112-6928"))
+Description: This package contains a suite of functions that allow to export
+             ringing data to a Microsoft Access Database (.mde). 
+             Data are formatted following the EURING and are compatible with output of
+             software Ring 2.0.
+License: GPL (>= 3)
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Imports:
+    magrittr,
+    RODBC,
+    tidyverse,
+    utils,
+    stats,
+    stringr,
+    readxl,
+    geosphere,
+    reticulate
+Suggests: 
+    devtools,
+    testthat

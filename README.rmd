@@ -1,0 +1,48 @@
+---
+output: github_document
+html_preview: false
+---
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  warning = FALSE,
+  fig.path = "README-"
+)
+```
+
+### RingR
+***
+
+`RingR` is a simple tool to circumvent manual data entries using software `Ring 2.0` to submit bird ringing data to the IFV Helgoland. *This is not a ready-to-use package, but rather a starting point for anyone with some experience in programming in R to avoid using another software to export data which is already well curated in the database of the user*.  
+
+
+*The package is available as follows*
+
+```{r, eval=FALSE}
+if (!("devtools" %in% rownames(installed.packages()))) {
+  install.packages("devtools")
+} else if (packageVersion("devtools") < 1.6) {
+  install.packages("devtools")
+}
+devtools::install_github("mottensmann/RingR")
+```
+
+Currently, the package contains a few functions to create and check export files:
+
+* `export.ring`: Export ringing data
+* `check.ring`: check export file
+* `read.lookup`: Open lookup table
+* `place.suggest`: Get suggested place names based on topographic name and Tk25 number
+
+See the respective helpfiles if you are interested in these functions to your own data
+
+```{r, fig.align='left', echo=FALSE}
+load("Map.RData")
+comb[[1]] 
+knitr::kable(comb[[2]][,c("No", "Code")],
+                  row.names = FALSE,
+                  col.names = c("Number", "strPlaceCode"),
+                  format = "html")
+```

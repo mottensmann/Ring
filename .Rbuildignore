@@ -1,0 +1,7 @@
+^RingR\.Rproj$
+^\.Rproj\.user$
+internal
+README.rmd
+rosm.cache
+.rds
+.tif
